@@ -6,7 +6,7 @@ body, html {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
 }
 
 header {
@@ -60,7 +60,6 @@ header nav ul li a:hover {
     gap: 10px;
 }
 
-
 .redes-sociais a {
     color: white;
     text-decoration: none;
@@ -84,6 +83,7 @@ header nav ul li a:hover {
     text-decoration: none;
     font-size: 20px;
 }
+
 footer {
     background-color: rgba(0, 139, 139);
     color: white;
@@ -130,86 +130,118 @@ footer {
     }
 }
 
-
-
 @media (max-width: 480px) {
-    .imagem-container.maior {
-        height: 60vh; /* Ajuste a altura conforme necessário */
-    }
-
+    .imagem-container.maior,
     .imagem-container.menor {
-        flex-direction: column;
-        width: 10px; 
-    }}
-
-    .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #25d366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, transform 0.3s;
-        z-index: 1000;
-    }
-    
-    .whatsapp-button:hover {
-        background-color: #1ebe57;
-        transform: scale(1.1);
-    }
-    
-    .whatsapp-icon {
-        width: 30px;
-        height: 30px;
+        width: 100%;
     }
 
-    main {
-        padding: 20px;
+    .produtos .produto {
+        width: 100%;
     }
-    
-    .furniture-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    .furniture-item {
-        background-color: white;
-        margin: 10px;
-        padding: 20px;
-        width: calc(33.33% - 20px);
-        box-sizing: border-box;
-        text-align: center;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .furniture-item:hover {
-        transform: translateY(-5px);
-    }
-    
-    .furniture-item img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
-    
-    .furniture-item h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-    
-    .furniture-item p {
-        font-size: 1em;
-        line-height: 1.4;
-    }
-    
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+}
+
+main {
+    padding: 20px;
+}
+
+.furniture-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.furniture-item {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.furniture-item:hover {
+    transform: translateY(-5px);
+}
+
+.furniture-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.furniture-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.furniture-item p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.imagens-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.imagem-container {
+    overflow: hidden;
+    border: 5px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: calc(50% - 20px); /* Ajuste para contêineres lado a lado */
+}
+
+.imagem-container.maior {
+    width: calc(50% - 20px);
+    height: auto;
+}
+
+.imagem-container.menor {
+    width: calc(50% - 20px);
+    height: auto;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
