@@ -1,13 +1,3 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-}
 
 header {
     background-color: rgba(0, 139, 139);
@@ -92,29 +82,60 @@ header nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.imagem-container {
+.imagens-section {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
-    border: 5px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+}
+
+.carrossel {
     display: flex;
-    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+   
 }
 
-.imagem-container.maior {
-    width: 55%;
-    height: auto;
+.carrossel-item {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
-.imagem-container.menor {
-    width: 40%;
-    height: auto;
-}
-
-.imagem-container img {
+.carrossel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
+    height: 95%;
+}
+
+.carrossel-anterior,
+.carrossel-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carrossel-anterior {
+    left: 10px;
+}
+
+.carrossel-proximo {
+    right: 10px;
+}
+
+.carrossel-anterior:hover,
+.carrossel-proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .texto-lateral {
